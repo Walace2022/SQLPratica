@@ -44,3 +44,13 @@ WHERE Genero = 'M'
 SELECT PrimeiroNome,UltimoNome FROM Atores
 WHERE Genero = 'F'
 ORDER BY PrimeiroNome
+
+--Buscar o nome do filme e o gênero
+
+SELECT F.Nome,G.Genero FROM FilmesGenero FG
+INNER JOIN
+Filmes F
+ON FG.IdFilme = F.Id
+INNER JOIN
+Generos G
+ON FG.IdGenero = G.Id
